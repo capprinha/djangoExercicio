@@ -1,6 +1,7 @@
-from django.http import HttpResponse
+
+from django.shortcuts import render
 from django.views import generic
 
 class PostView(generic.View):
-    def home(request):
-        return HttpResponse('hello world')
+    def get(self, request):
+        return render(request , 'index.html')
